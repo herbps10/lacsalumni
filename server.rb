@@ -14,7 +14,7 @@ configure do
 
 	require "redis"
 	if settings.environment == :production
-		uri = URI.parse("redis://herbps10:1d6933e71738f36484d4781c406a6567@bluegill.redistogo.com:9350/")
+		#uri = URI.parse("redis://@bluegill.redistogo.com:9350/")
 		$redis = Redis.new :host => uri.host, :port => uri.port, :password => uri.password
 	else
 		$redis = Redis.new
